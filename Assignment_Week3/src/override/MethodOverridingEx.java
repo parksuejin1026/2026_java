@@ -6,7 +6,7 @@ public class MethodOverridingEx {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Line line = new Line();
 		paint(line);
 		paint(new Shape());
