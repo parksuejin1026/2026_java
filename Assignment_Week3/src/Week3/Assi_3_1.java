@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Assi_3_1 {	
-			private static final int STAGE_MIN = 1;
-			private static final int STAGE_MAX = 50;
 			
 			public static void main(String[] args) {
 //				1.좀비 게임을 만들어보자.

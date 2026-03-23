@@ -22,7 +22,6 @@ public class Assi_3_2 {
 		int y_max = 4, y_min = 0;
 		
 		int x = 0, y = 0; // 주인공의 위치를 가지는 변수
-		int count = 0; // 상하좌우를 입력할 때마다 카운트 증가
 		// 입력을 받아서 상하좌우 (1, 2, 3, 4)
 		while(true) {
 		System.out.println("이동하고 싶은 위치를 입력해주세요 상(1) 하(2) 좌(3) 우(4) : ");
