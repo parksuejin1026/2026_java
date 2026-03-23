@@ -16,7 +16,7 @@ public class RaidManager {
 		while (dragon.isAlive() && !party.isEmpty()) {
 			// 1. 영웅들의 턴
 			for (int i = 0; i < party.size(); i++) {
-				SkillUsable hero = (SkillUsable) party.get(i);
+				SkillUsable hero = (SkillUsable) party.get(i); // 객체 설정하기
 				hero.useSkill(dragon); // 전원 스킬 사용
 
 				if (!dragon.isAlive())
