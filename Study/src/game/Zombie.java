@@ -7,7 +7,6 @@ public class Zombie extends Entity implements Attackable {
 	
 	@Override
 	public void attack(Entity target) {
-		// TODO Auto-generated method stub
 
 	}
 
