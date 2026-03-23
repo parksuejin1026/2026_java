@@ -48,6 +48,7 @@ public class Assi_2_7 {
 			
 		}
 		System.out.println("==================================================");
+		sc.close();
 	}
 
 }
