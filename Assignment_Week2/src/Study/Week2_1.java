@@ -5,7 +5,6 @@ import java.util.*;
 public class Week2_1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("로또 번호 생성기");
 		Random r = new Random();
 		

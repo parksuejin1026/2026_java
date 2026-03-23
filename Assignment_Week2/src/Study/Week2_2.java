@@ -3,7 +3,6 @@ package Study;
 public class Week2_2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("별 그리기");
 		int count = 0;
 		
