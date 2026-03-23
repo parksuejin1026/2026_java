@@ -25,4 +25,6 @@ public class Zombie {
 			System.out.println("오른쪽으로 이동했습니다. " + name + "좀비의 위치 : " + curPos);
 		}
 	}
+	
+	
 }
