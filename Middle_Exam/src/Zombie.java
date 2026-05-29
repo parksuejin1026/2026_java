@@ -17,34 +17,27 @@ public class Zombie extends Thread {
     }
     
     public int getPos() { return pos; }
-    public void stopZombie() { this.running = false; }
+    public void stopZombie() { this.running = false; } // Thread를 종료 시키기 위해 while문에 있는 참, 거짓 조건 변수
     
     @Override
     public void run() {
         while (running) {
             try {
-                // [요구사항] 1초에서 2초 사이 무작위 랜덤 딜레이 대기
-                int sleepTime = r.nextInt(1001) + 1000;
-                Thread.sleep(sleepTime);
+                int sleepTime = r.nextInt(1001) + 1000; // 1~2초 대기하기 위한 변수
+                Thread.sleep(sleepTime); // 1~2초 수면
                 
-                // 1 ~ 20 영역 안에서 실시간 자동 좌우 이동
-                int move = r.nextBoolean() ? 1 : -1;
-                pos += move;
+                int move = r.nextBoolean() ? 1 : -1; // 왼쪽, 오른쪽
+                pos += move; 
                 if (pos < 1) pos = 1;
                 if (pos > 20) pos = 20;
                 
-                // ------------------------------------------------------------------
-                // [실시간 융합 판정] 플레이어가 입력을 대기하느라 블로킹 상태로 정지해 있어도
-                // 좀비가 알아서 사냥 범위를 좁혀 덮치는 순간 JVM을 실시간 종료 시킵니다.
-                // ------------------------------------------------------------------
                 if (this.pos == player.getPos()) {
                     System.out.println("\n☠ " + name + "와(과) 부딪혔습니다! GAMEOVER!");
-                    ZombieGame.printFinalScore(); // 최종 누적 스코어 요약 보고
-                    System.exit(0); // 얼어붙어 있는 메인 스레드까지 깔끔하게 일괄 셧다운
+                    ZombieGame.printFinalScore(); // 최종 스코어 보고
+                    System.exit(0); // 쓰레드들도 모두 강제 종료
                 }
                 
             } catch (InterruptedException e) {
-                // 잠 자는 도중 인터럽트 종료 지시를 감지하면 루프를 안전하게 강제 이탈
                 break;
             }
         }

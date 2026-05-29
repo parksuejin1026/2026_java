@@ -1,34 +1,32 @@
 import java.util.Random;
 
-// ==========================================
-// 플레이어(인간) 클래스 (예외 및 롤백 제어 완벽 반영)
-// ==========================================
 public class Human {
-    private int pos; // 플레이어 위치 (1 ~ 20)
-    private Random r = new Random();
-
-    public Human(int pos) {
-        this.pos = pos;
+	private String name; // 플레이어 이름
+    private int pos = 1; // 플레이어 위치 (1 ~ 20)
+    private Random r = new Random(); // 점프할 때 쓰기 위한 랜덤 객체
+    
+    public Human(String name) { // Human 클래스 생성자 이름을 지정하기 위해 사용
+        this.name = name;
     }
     
-    public int getPos() { return pos; }
-    public void setPos(int pos) { this.pos = pos; }
+    public int getPos() { return pos; } // 위치 반환
+    public void setPos(int pos) { this.pos = pos; } // 위치 설정
     
     public void moveLeft() {
-        if (pos > 1) { 
+        if (pos > 1) { // 플레이어 위치가 1을 넘어선 다면 발동
             pos--;
-            System.out.println("왼쪽으로 이동했습니다. (현재 위치 : " + pos + ")");
-        } else {
-            System.out.println("맵의 왼쪽 끝(1)입니다. 더 이상 나갈 수 없습니다.");
+            System.out.println("왼쪽으로 이동했습니다. (현재 위치 : " + pos + ")"); 
+        } else { // 아니면 그 자리에 가만히 있고 현재 위치만 출력
+            System.out.println("맵의 왼쪽 끝(1)입니다. 더 이상 나갈 수 없습니다. (현재 위치 : " + pos + ")");
         }
     }
     
     public void moveRight() {
-        if (pos < 20) {
+        if (pos < 20) { // 플레이어 위치가 20미만이면 발동
             pos++;
             System.out.println("오른쪽으로 이동했습니다. (현재 위치 : " + pos + ")");
-        } else {
-            System.out.println("맵의 오른쪽 끝(20)입니다. 더 이상 나갈 수 없습니다.");
+        } else { // 아니면 그 자리에 가만히 있고 현재 위치만 출력
+            System.out.println("맵의 오른쪽 끝(20)입니다. 더 이상 나갈 수 없습니다. (현재 위치 : " + pos + ")");
         }
     }
     
