@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Assignment_Week2/src"/>
+	<classpathentry kind="src" path="Assignment_Week3/src"/>
+	<classpathentry kind="src" path="Study/src"/>
+	<classpathentry kind="src" path="thread_pro/src"/>
+	<classpathentry kind="src" path="Thread_Study/src"/>
+	<classpathentry kind="src" path="Week10/src"/>
+	<classpathentry kind="src" path="Week11/src"/>
+	<classpathentry kind="src" path="Week12_Assi/src"/>
+	<classpathentry kind="src" path="Week12/src"/>
+	<classpathentry kind="src" path="Week4/src"/>
+	<classpathentry kind="src" path="Week7/src"/>
+	<classpathentry kind="output" path="Assignment_Week2/bin"/>
+</classpath>
